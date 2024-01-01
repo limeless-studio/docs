@@ -22,7 +22,7 @@ public float speed = 5f;
 [CustomEditor(typeof(PlayerScript))]
 public class PlayerScriptEditor : Editor
 {
-   //…
+   //… 
 } 
 ```
 
