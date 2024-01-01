@@ -1,33 +1,8 @@
-# Attributes Overview
-
-## Special Attributes
-
-### AllowNesting
-This attribute must be used in some cases when you want meta attributes to work inside serializable nested structs or classes.
-You can check in which cases you need to use it [here](https://dbrizov.github.io/na-docs/attributes/special_attributes/allow_nesting.html).
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-    public MyStruct myStruct;
-}
-
-[System.Serializable]
-public struct MyStruct
-{
-    public bool enableFlag;
-
-    [EnableIf("enableFlag")]
-    [AllowNesting] // Because it's nested we need to explicitly allow nesting
-    public int integer;
-}
-```
-
-## Drawer Attributes
+# Drawer Attributes
 Provide special draw options to serialized fields.
 A field can have only one DrawerAttribute. If a field has more than one, only the bottom one will be used.
 
-### AnimatorParam
+## AnimatorParam
 Select an Animator paramater via dropdown interface.
 
 ```csharp
@@ -45,7 +20,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/AnimatorParam.png)
 
-### Button
+## Button
 A method can be marked as a button. A button appears in the inspector and executes the method if clicked.
 Works both with instance and static methods.
 
@@ -63,7 +38,7 @@ public class SampleComponent : MonoBehaviour
 ![inspector](/assets/core/Button.png)
 
 
-### CurveRange
+## CurveRange
 Set bounds and modify curve color for AnimationCurves
 
 ```csharp
@@ -82,7 +57,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/CurveRange.png)
 
-### Dropdown
+## Dropdown
 Provides an interface for dropdown value selection.
 
 ```csharp
@@ -118,7 +93,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/Dropdown.png)
 
-### EnumFlags
+## EnumFlags
 Provides dropdown interface for setting enum flags.
 
 ```csharp
@@ -140,7 +115,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/EnumFlags.png)
 
-### Expandable
+## Expandable
 Make scriptable objects expandable.
 
 ```csharp
@@ -153,7 +128,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/Expandable.png)
 
-### HorizontalLine
+## HorizontalLine
 
 ```csharp
 public class SampleComponent : MonoBehaviour
@@ -171,7 +146,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/HorizontalLine.png)
 
-### InfoBox
+## InfoBox
 Used for providing additional information.
 
 ```csharp
@@ -190,7 +165,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/InfoBox.png)
 
-### InputAxis
+## InputAxis
 Select an input axis via dropdown interface.
 
 ```csharp
@@ -203,7 +178,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/InputAxis.png)
 
-### Layer
+## Layer
 Select a layer via dropdown interface.
 
 ```csharp
@@ -219,7 +194,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/Layer.png)
 
-### MinMaxSlider
+## MinMaxSlider
 A double slider. The **min value** is saved to the **X** property, and the **max value** is saved to the **Y** property of a **Vector2** field.
 
 ```csharp
@@ -232,7 +207,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/MinMaxSlider.png)
 
-### ProgressBar
+## ProgressBar
 ```csharp
 public class SampleComponent : MonoBehaviour
 {
@@ -249,7 +224,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/ProgressBar.png)
 
-### ReorderableList
+## ReorderableList
 Provides array type fields with an interface for easy reordering of elements.
 
 ```csharp
@@ -265,7 +240,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/ReorderableList.png)
 
-### ResizableTextArea
+## ResizableTextArea
 A resizable text area where you can see the whole text.
 Unlike Unity's **Multiline** and **TextArea** attributes where you can see only 3 rows of a given text, and in order to see it or modify it you have to manually scroll down to the desired row.
 
@@ -279,7 +254,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/ResizableTextArea.png)
 
-### Scene
+## Scene
 Select a scene from the build settings via dropdown interface.
 
 ```csharp
@@ -295,7 +270,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/Scene.png)
 
-### ShowAssetPreview
+## ShowAssetPreview
 Shows the texture preview of a given asset (Sprite, Prefab...).
 
 ```csharp
@@ -311,7 +286,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/ShowAssetPreview.png)
 
-### ShowNativeProperty
+## ShowNativeProperty
 Shows native C# properties in the inspector.
 All native properties are displayed at the bottom of the inspector after the non-serialized fields and before the method buttons.
 It supports only certain types **(bool, int, long, float, double, string, Vector2, Vector3, Vector4, Color, Bounds, Rect, UnityEngine.Object)**.
@@ -328,7 +303,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/ShowNativeProperty.png)
 
-### ShowNonSerializedField
+## ShowNonSerializedField
 Shows non-serialized fields in the inspector.
 All non-serialized fields are displayed at the bottom of the inspector before the method buttons.
 Keep in mind that if you change a non-static non-serialized field in the code - the value in the inspector will be updated after you press **Play** in the editor.
@@ -351,7 +326,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/ShowNonSerializedField.png)
 
-### SortingLayer
+## SortingLayer
 Select a sorting layer via dropdown interface.
 
 ```csharp
@@ -367,7 +342,7 @@ public class SampleComponent : MonoBehaviour
 
 ![inspector](/assets/core/SortingLayer.png)
 
-### Tag
+## Tag
 Select a tag via dropdown interface.
 
 ```csharp
@@ -379,243 +354,3 @@ public class SampleComponent : MonoBehaviour
 ```
 
 ![inspector](/assets/core/Tag.png)
-
-## Meta Attributes
-Give the fields meta data. A field can have more than one meta attributes.
-
-### BoxGroup
-Surrounds grouped fields with a box.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	[BoxGroup("Integers")]
-	public int firstInt;
-	[BoxGroup("Integers")]
-	public int secondInt;
-
-	[BoxGroup("Floats")]
-	public float firstFloat;
-	[BoxGroup("Floats")]
-	public float secondFloat;
-}
-```
-
-![inspector](/assets/core/BoxGroup.png)
-
-### Foldout
-Makes a foldout group.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	[Foldout("Integers")]
-	public int firstInt;
-	[Foldout("Integers")]
-	public int secondInt;
-
-	[Foldout("Floats")]
-	public float firstFloat;
-	[Foldout("Floats")]
-	public float secondFloat;
-
-	[Foldout("General")]
-	public int intGeneral;
-	[Foldout("General")]
-	public float floatGeneral;
-	[Foldout("General")]
-	public string stringGeneral;
-	[Foldout("General")]
-	public bool boolGeneral;
-	[Foldout("General")]
-	public GameObject gameObjectGeneral;
-}
-```
-
-![inspector](/assets/core/Foldout.png)
-
-### EnableIf / DisableIf
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	public bool enableMyInt;
-
-	[EnableIf("enableMyInt")]
-	public int myInt;
-
-	[EnableIf("Enabled")]
-	public float myFloat;
-
-	[EnableIf("NotEnabled")]
-	public Vector3 myVector;
-
-	public bool Enabled() { return true; }
-
-	public bool NotEnabled => false;
-}
-```
-
-![inspector](/assets/core/EnableIf.gif)
-
-You can have more than one condition.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	public bool flag0;
-	public bool flag1;
-
-	[EnableIf(EConditionOperator.And, "flag0", "flag1")]
-	public int enabledIfAll;
-
-	[EnableIf(EConditionOperator.Or, "flag0", "flag1")]
-	public int enabledIfAny;
-}
-```
-
-### ShowIf / HideIf
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	public bool showInt;
-
-	[ShowIf("showInt")]
-	public int myInt;
-
-	[ShowIf("AlwaysShow")]
-	public float myFloat;
-
-	[ShowIf("NeverShow")]
-	public Vector3 myVector;
-
-	public bool AlwaysShow() { return true; }
-
-	public bool NeverShow => false;
-}
-```
-
-![inspector](/assets/core/ShowIf.gif)
-
-You can have more than one condition.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	public bool flag0;
-	public bool flag1;
-
-	[ShowIf(EConditionOperator.And, "flag0", "flag1")]
-	public int showIfAll;
-
-	[ShowIf(EConditionOperator.Or, "flag0", "flag1")]
-	public int showIfAny;
-}
-```
-
-### Label
-Override default field label.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	[Label("Short Name")]
-	public string veryVeryLongName;
-
-	[Label("RGB")]
-	public Vector3 vectorXYZ;
-}
-```
-
-![inspector](/assets/core/Label.png)
-
-### OnValueChanged
-Detects a value change and executes a callback.
-Keep in mind that the event is detected only when the value is changed from the inspector.
-If you want a runtime event, you should probably use an event/delegate and subscribe to it.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	[OnValueChanged("OnValueChangedCallback")]
-	public int myInt;
-
-	private void OnValueChangedCallback()
-	{
-		Debug.Log(myInt);
-	}
-}
-```
-
-### ReadOnly
-Make a field read only.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	[ReadOnly]
-	public Vector3 forwardVector = Vector3.forward;
-}
-```
-
-![inspector](/assets/core/ReadOnly.png)
-
-## Validator Attributes
-Used for validating the fields. A field can have infinite number of validator attributes.
-
-### MinValue / MaxValue
-Clamps integer and float fields.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	[MinValue(0), MaxValue(10)]
-	public int myInt;
-
-	[MinValue(0.0f)]
-	public float myFloat;
-}
-```
-
-![inspector](/assets/core/MinMaxValue.gif)
-
-### Required
-Used to remind the developer that a given reference type field is required.
-
-```csharp
-public class SampleComponent : MonoBehaviour
-{
-	[Required]
-	public Transform myTransform;
-
-	[Required("Custom required text")]
-	public GameObject myGameObject;
-}
-```
-
-![inspector](/assets/core/Required.gif)
-
-### ValidateInput
-The most powerful ValidatorAttribute.
-
-```csharp
-public class _SampleComponent : MonoBehaviour
-{
-	[ValidateInput("IsNotNull")]
-	public Transform myTransform;
-
-	[ValidateInput("IsGreaterThanZero", "myInteger must be greater than zero")]
-	public int myInt;
-
-	private bool IsNotNull(Transform tr)
-	{
-		return tr != null;
-	}
-
-	private bool IsGreaterThanZero(int value)
-	{
-		return value > 0;
-	}
-}
-```
-
-![inspector](/assets/core/ValidateInput.gif)
