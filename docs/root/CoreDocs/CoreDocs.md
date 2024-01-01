@@ -5,14 +5,14 @@ The core is the combination of all the systems, plugins, scripts, models and so 
 The core is a kind of foundation of the framework.
 
 ## Features
-- [Attributes](/docs/root/CoreDocs/Attributes)
-- [Managed Behaviour System](/docs/root/CoreDocs/BehaviourSystem)
+- [Attributes](/docs/root/CoreDocs/Attributes/Attributes.md)
+- [Managed Behaviour System](/docs/root/CoreDocs/BehaviourSystem/BehaviourSystem.md)
 
 ## Table of Contents
-- [Attribtues](/docs/root/CoreDocs/Attributes)
+- [Attribtues](/docs/root/CoreDocs/Attributes/Attributes.md)
   - [Special Attributes](/docs/root/CoreDocs/Attributes/SpecialAttributes.md)
   - [Drawer Attributes](/docs/root/CoreDocs/Attributes/DrawerAttributes.md)
   - [Meta Attributes](/docs/root/CoreDocs/Attributes/MetaAttributes.md)
   - [Validator Attributes](/docs/root/CoreDocs/Attributes/ValidatorAttributes.md)
-- [Managed Behaviour System](/docs/root/CoreDocs/BehaviourSystem)
-  - [How to use](/docs/root/CoreDocs/BehaviourSystem/Usage.md) 
+- [Managed Behaviour System](/docs/root/CoreDocs/BehaviourSystem/BehaviourSystem.md)
+  - [How to use](/docs/root/CoreDocs/BehaviourSystem/Usage.md)
