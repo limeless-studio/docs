@@ -15,4 +15,4 @@ The core is a kind of foundation of the framework.
   - [Meta Attributes](/docs/root/CoreDocs/Attributes/MetaAttributes.md)
   - [Validator Attributes](/docs/root/CoreDocs/Attributes/ValidatorAttributes.md)
 - [Managed Behaviour System](/docs/root/CoreDocs/BehaviourSystem)
-  - [How to use](/docs/root/CoreDocs/BehaviourSystem/Usage.md)
+  - [How to use](/docs/root/CoreDocs/BehaviourSystem/Usage.md) 
