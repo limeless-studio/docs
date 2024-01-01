@@ -45,14 +45,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/limeless-studio/docs',
+            'https://github.com/limeless-studio/docs/tree/main',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/limeless-studio/docs',
+            'https://github.com/limeless-studio/docs/tree/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -81,7 +81,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/limeless-studio/docsCore',
+            href: 'https://github.com/limeless-studio/docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -121,7 +121,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/limeless-studio/docusaurus',
+                href: 'https://github.com/limeless-studio/docs',
               },
             ],
           },
