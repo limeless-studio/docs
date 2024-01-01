@@ -1,6 +1,3 @@
----
-sidebar_position: 1
----
 # Special Attributes
 
 ## AllowNesting
