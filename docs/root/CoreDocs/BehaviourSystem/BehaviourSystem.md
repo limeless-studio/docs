@@ -1,4 +1,4 @@
-# Behaviour System
+# Managed Behaviour System
 
 ## Features
 - Uses UpdateManager to call objects' `OnUpdate`, `OnFixedUpdate`, and `OnLateUpdate` methods, bypassing Unity's `MonoBehaviour` update system.
