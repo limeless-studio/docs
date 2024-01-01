@@ -19,5 +19,5 @@ The code documentation is a document that contains all the information about the
 
 
 ## Projects
-- [Project 1](./XO/XO)
-- [Project 2](RoadGame/RoadGame)
+- [Project 1](XO/XO.md)
+- [Project 2](RoadGame/RoadGame.md)
